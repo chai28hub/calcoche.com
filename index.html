@@ -144,18 +144,27 @@
 
       document.getElementById("contacto").style.display = "block";
     }
+function enviarContacto() {
+  let nombre = document.getElementById("nombre").value;
+  let email = document.getElementById("email").value;
+  let mensaje = document.getElementById("mensaje").value;
 
-    function enviarContacto() {
-      let nombre = document.getElementById("nombre").value;
-      let email = document.getElementById("email").value;
+  if (!nombre || !email) {
+    alert("Por favor rellena tu nombre y correo.");
+    return;
+  }
 
-      if (!nombre || !email) {
-        alert("Por favor rellena tu nombre y correo.");
-        return;
-      }
-
-      alert("Gracias " + nombre + ". Hemos recibido tu solicitud y te contactaremos pronto.");
-    }
+  // Enviar con EmailJS
+  emailjs.send("TU_SERVICE_ID", "TU_TEMPLATE_ID", {
+    from_name: nombre,
+    from_email: email,
+    message: mensaje
+  }).then(function(response) {
+      alert("✅ Gracias " + nombre + ". Hemos recibido tu solicitud y te contactaremos pronto.");
+  }, function(error) {
+      alert("❌ Error al enviar: " + JSON.stringify(error));
+  });
+}
   </script>
 
 </body>
