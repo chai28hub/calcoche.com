@@ -197,3 +197,36 @@ textarea {
 /* añade al CSS para que no “salte” el layout mientras carga */
 .adsbygoogle { min-height: 90px; }
 
+/* Layout con 3 columnas: izquierda (texto), centro (calculadora), derecha (texto) */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  align-items: start;
+  padding: 0 16px;
+}
+
+/* Los bloques de texto lateral */
+.intro {
+  color: #eaf1ff;
+  line-height: 1.6;
+  font-size: 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Responsive: apila en móvil */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .intro, .calc-container {
+    margin-bottom: 20px;
+  }
+}
+
+
