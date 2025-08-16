@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general */
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.calc-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Títulos */
+.calc-container h2 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+    font-size: 1.8em;
+}
+
+/* Labels y selects/inputs */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 5px rgba(42,82,152,0.5);
+}
+
+/* Botones */
+button {
+    background-color: #1e3c72;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2a5298;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Resultados */
+.result {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.result h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.result p, .result li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.result ul {
+    padding-left: 20px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-form h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Responsive - Móviles */
+@media (max-width: 600px) {
+    .calc-container {
+        padding: 20px 20px;
+        border-radius: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+/* ...mantener todo el CSS anterior... */
+
+/* Lista de desglose con colores e iconos */
+.result ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.result li {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+
+/* Colores según tipo de gasto */
+.result li.precio { background-color: #d0e6ff; color: #1e3c72; } /* azul */
+.result li.arancel { background-color: #d4f8d4; color: #2a7a2a; } /* verde */
+.result li.matriculacion { background-color: #ffe5b4; color: #b36b00; } /* naranja */
+.result li.extra { background-color: #ffd6d6; color: #b30000; } /* rojo */
+
+/* Emoji/icono al inicio de cada li */
+.result li::before {
+    content: "💰";
+    margin-right: 10px;
+}
+
+/* Cambiar emoji según clase */
+.result li.arancel::before { content: "📄"; }
+.result li.matriculacion::before { content: "🏷️"; }
+.result li.extra::before { content: "⚠️"; }
