@@ -175,12 +175,22 @@ textarea {
 .result li.matriculacion::before { content: "🏷️"; }
 .result li.extra::before { content: "⚠️"; }
 
-.intro{
+/* Mejora visual del texto introductorio */
+.intro {
   max-width: 820px;
   margin: 24px auto;
-  color: #fff;
-  line-height: 1.5;
-  padding: 0 16px;
+  color: #eaf1ff;              /* texto claro sobre fondo azul */
+  line-height: 1.6;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.08); /* cajita semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
 }
-.intro h2{ margin-bottom: 8px; }
+
+.intro h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
 
