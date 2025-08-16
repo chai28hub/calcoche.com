@@ -194,3 +194,6 @@ textarea {
   font-size: 22px;
 }
 
+/* añade al CSS para que no “salte” el layout mientras carga */
+.adsbygoogle { min-height: 90px; }
+
