@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Calculadora Importación Dubái → España</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-       emailjs.init("-wVmKs-licC3Qk3-j"); 
-    })();
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilos.css" />
+
+  <!-- EmailJS SDK v3 (SOLO este, no cargues otros) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Inicializa con tu Public Key
+    emailjs.init({ publicKey: '-wVmKs-licC3Qk3-j' });
   </script>
 
-  <!-- Google AdSense -->
+  <!-- Google AdSense (cargar una sola vez) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2994166354624544" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,43 +27,32 @@
        data-ad-slot="3315270269"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
   <main class="layout">
-
     <!-- Texto izquierda -->
     <section class="intro">
       <h2>CALCULADORA APROXIMACIÓN</h2>
       <h2>¿Importar un coche de Dubái a España? 🚗</h2>
-      <p>
-        Que no te engañen con precios inflados.  
-        Hay muchas páginas y personas que ofrecen presupuestos exagerados para traer un coche desde Dubái.  
-      </p>
-      <p>
-        Nuestra misión es ayudarte a entender de manera clara y sencilla cuáles son los gastos reales que intervienen.  
-        Con la calculadora tendrás una referencia aproximada y realista antes de decidir.  
-      </p>
+      <p>Que no te engañen con precios inflados. Hay muchas páginas y personas que ofrecen presupuestos exagerados para traer un coche desde Dubái.</p>
+      <p>Nuestra misión es ayudarte a entender de manera clara y sencilla cuáles son los gastos reales que intervienen. Con la calculadora tendrás una referencia aproximada y realista antes de decidir.</p>
     </section>
 
     <!-- Calculadora en el centro -->
     <div class="calc-container">
       <h2>Calculadora Importación Dubái → España</h2>
 
-      <!-- Anuncio dentro -->
+      <!-- Anuncio dentro de la tarjeta -->
       <ins class="adsbygoogle"
            style="display:block; min-height:90px; margin:8px 0 18px"
            data-ad-client="ca-pub-2994166354624544"
            data-ad-slot="6469166770"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
       <label>Precio del coche en Dubái (AED):</label>
-      <input type="number" id="precioDubai" placeholder="Introduce precio en AED" required step="0.01" inputmode="decimal">
+      <input type="number" id="precioDubai" placeholder="Introduce precio en AED" required step="0.01" inputmode="decimal" autocomplete="off" />
 
       <label>Emisiones CO₂:</label>
       <select id="co2">
@@ -79,8 +69,8 @@
       <div id="contacto" class="contact-form" style="display:none;">
         <h3>¿Quieres una estimación exacta?</h3>
         <p>Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
-        <input type="text" id="nombre" placeholder="Tu nombre" required>
-        <input type="email" id="email" placeholder="Tu correo" required>
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+        <input type="email" id="email" placeholder="Tu correo" required />
         <textarea id="mensaje" placeholder="Detalles adicionales (opcional)"></textarea>
         <button onclick="enviarContacto()">Enviar</button>
       </div>
@@ -89,41 +79,34 @@
     <!-- Texto derecha -->
     <section class="intro">
       <h2>¿Por qué usar esta calculadora? ✅</h2>
-      <p>
-        Muchas veces se prometen precios irreales para atraer clientes.  
-        Aquí obtendrás un cálculo transparente con desglose de todos los costes.  
-      </p>
-      <p>
-        Así podrás comparar, planificar mejor tu inversión y evitar sorpresas desagradables.  
-        La herramienta es solo una guía, pero te dará una visión mucho más clara del proceso.  
-      </p>
+      <p>Muchas veces se prometen precios irreales para atraer clientes. Aquí obtendrás un cálculo transparente con desglose de todos los costes.</p>
+      <p>Así podrás comparar, planificar mejor tu inversión y evitar sorpresas desagradables. La herramienta es solo una guía, pero te dará una visión mucho más clara del proceso.</p>
     </section>
-
   </main>
 
   <script>
     function calcular() {
-      let precioDubai = parseFloat(document.getElementById("precioDubai").value);
-      let tasaMatriculacion = parseFloat(document.getElementById("co2").value);
+      const precioDubai = parseFloat(document.getElementById("precioDubai").value);
+      const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
 
       if (!precioDubai) {
         alert("Por favor introduce un precio válido.");
         return;
       }
 
-      // Conversión AED → EUR
-      let precioEur = precioDubai * 0.25;
+      // Conversión AED → EUR (aprox.)
+      const precioEur = precioDubai * 0.25;
 
-      // Costes fijos
-      let transporte = 1700;
-      let itv = 1620;
-      let gastosExtra = 1500;
+      // Costes fijos (ajústalos si lo deseas)
+      const transporte = 1700;
+      const itv = 1620;
+      const gastosExtra = 1500;
 
       // Cálculos importación
-      let arancel = (precioEur + transporte) * 0.10;
-      let iva = (precioEur + transporte + arancel) * 0.21;
-      let matriculacion = precioEur * tasaMatriculacion;
-      let precioFinal = precioEur + transporte + arancel + iva + matriculacion + itv + gastosExtra;
+      const arancel = (precioEur + transporte) * 0.10;
+      const iva = (precioEur + transporte + arancel) * 0.21;
+      const matriculacion = precioEur * tasaMatriculacion;
+      const precioFinal = precioEur + transporte + arancel + iva + matriculacion + itv + gastosExtra;
 
       // Mostrar resultados
       const res = document.getElementById("resultado");
@@ -147,28 +130,35 @@
     }
 
     function enviarContacto() {
-      let nombre = document.getElementById("nombre").value;
-      let email = document.getElementById("email").value;
-      let mensaje = document.getElementById("mensaje").value;
+      const btn     = event?.target || document.querySelector('.contact-form button');
+      const nombre  = document.getElementById("nombre").value.trim();
+      const email   = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
 
       if (!nombre || !email) {
         alert("Por favor rellena tu nombre y correo.");
         return;
       }
 
-      // Enviar con EmailJS
-      emailjs.send("service_rsot1fm", "template_mv0anj8", {
-        from_name: nombre,
-        from_email: email,
-        message: mensaje
-      }).then(function(response) {
-          alert("✅ Gracias " + nombre + ". Hemos recibido tu solicitud y te contactaremos pronto.");
-      }, function(error) {
-          alert("❌ Error al enviar: " + JSON.stringify(error));
+      if (btn) { btn.disabled = true; btn.textContent = "Enviando..."; }
+
+      // Enviar con EmailJS (IDs correctos)
+      emailjs.send('service_rsot1fm', 'template_mv0anj8', {
+        from_name:  nombre,   // Debe coincidir con {{from_name}} en tu plantilla
+        from_email: email,    // {{from_email}}
+        message:    mensaje   // {{message}}
+      })
+      .then(() => {
+        alert(`✅ Gracias ${nombre}. Hemos recibido tu solicitud.`);
+        if (btn) { btn.disabled = false; btn.textContent = "Enviar"; }
+      })
+      .catch(err => {
+        console.error('EmailJS ERROR:', err);
+        alert("❌ Error al enviar: " + (err?.text || JSON.stringify(err)));
+        if (btn) { btn.disabled = false; btn.textContent = "Enviar"; }
       });
     }
   </script>
-
 </body>
 </html>
 
