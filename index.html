@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Anuncio superior (banner_footer) -->
+  <!-- Anuncio superior -->
   <ins class="adsbygoogle"
        style="display:block; min-height:90px; margin:12px 0"
        data-ad-client="ca-pub-2994166354624544"
@@ -21,58 +21,75 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
-  <section class="intro">
-    <h2>¿Importar un coche de Dubái a España? 🚗</h2>
-    <p>
-      Que no te engañen con precios inflados.
-      Hay muchas páginas y personas que te dan presupuestos exagerados para traer un coche desde Dubái a España.
-      Por eso hemos creado esta calculadora: una herramienta sencilla y práctica que te ayuda a obtener un
-      <strong>precio aproximado y realista</strong> de lo que puede costar la importación.
-    </p>
-    <p>
-      La idea es que tengas una referencia clara antes de tomar decisiones, para que compares y no pagues de más.
-      Usa la calculadora, revisa las opciones y descubre por ti mismo cuánto podría costar tu coche importado.
-    </p>
-  </section>
+  <main class="layout">
 
-  <div class="calc-container">
-    <h2>Calculadora Importación Dubái → España</h2>
+    <!-- Texto izquierda -->
+    <section class="intro">
+      <h2>¿Importar un coche de Dubái a España? 🚗</h2>
+      <p>
+        Que no te engañen con precios inflados.  
+        Hay muchas páginas y personas que ofrecen presupuestos exagerados para traer un coche desde Dubái.  
+      </p>
+      <p>
+        Nuestra misión es ayudarte a entender de manera clara y sencilla cuáles son los gastos reales que intervienen.  
+        Con la calculadora tendrás una referencia aproximada y realista antes de decidir.  
+      </p>
+    </section>
 
-    <!-- Anuncio dentro de la tarjeta (banner_inicio) -->
-    <ins class="adsbygoogle"
-         style="display:block; min-height:90px; margin:8px 0 18px"
-         data-ad-client="ca-pub-2994166354624544"
-         data-ad-slot="6469166770"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <!-- Calculadora en el centro -->
+    <div class="calc-container">
+      <h2>Calculadora Importación Dubái → España</h2>
 
-    <label>Precio del coche en Dubái (AED):</label>
-    <input type="number" id="precioDubai" placeholder="Introduce precio en AED" required>
+      <!-- Anuncio dentro -->
+      <ins class="adsbygoogle"
+           style="display:block; min-height:90px; margin:8px 0 18px"
+           data-ad-client="ca-pub-2994166354624544"
+           data-ad-slot="6469166770"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
 
-    <label>Emisiones CO₂:</label>
-    <select id="co2">
-      <option value="0">Menos de 120 g/km (0%)</option>
-      <option value="0.0475">120-160 g/km (4,75%)</option>
-      <option value="0.0975">160-200 g/km (9,75%)</option>
-      <option value="0.1475" selected>Más de 200 g/km (14,75%)</option>
-    </select>
+      <label>Precio del coche en Dubái (AED):</label>
+      <input type="number" id="precioDubai" placeholder="Introduce precio en AED" required step="0.01" inputmode="decimal">
 
-    <button onclick="calcular()">Calcular Precio Final</button>
+      <label>Emisiones CO₂:</label>
+      <select id="co2">
+        <option value="0">Menos de 120 g/km (0%)</option>
+        <option value="0.0475">120-160 g/km (4,75%)</option>
+        <option value="0.0975">160-200 g/km (9,75%)</option>
+        <option value="0.1475" selected>Más de 200 g/km (14,75%)</option>
+      </select>
 
-    <div id="resultado" class="result" style="display:none;"></div>
+      <button onclick="calcular()">Calcular Precio Final</button>
 
-    <div id="contacto" class="contact-form" style="display:none;">
-      <h3>¿Quieres una estimación exacta?</h3>
-      <p>Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
-      <input type="text" id="nombre" placeholder="Tu nombre" required>
-      <input type="email" id="email" placeholder="Tu correo" required>
-      <textarea id="mensaje" placeholder="Detalles adicionales (opcional)"></textarea>
-      <button onclick="enviarContacto()">Enviar</button>
+      <div id="resultado" class="result" style="display:none;"></div>
+
+      <div id="contacto" class="contact-form" style="display:none;">
+        <h3>¿Quieres una estimación exacta?</h3>
+        <p>Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu correo" required>
+        <textarea id="mensaje" placeholder="Detalles adicionales (opcional)"></textarea>
+        <button onclick="enviarContacto()">Enviar</button>
+      </div>
     </div>
-  </div>
+
+    <!-- Texto derecha -->
+    <section class="intro">
+      <h2>¿Por qué usar esta calculadora?</h2>
+      <p>
+        Muchas veces se prometen precios irreales para atraer clientes.  
+        Aquí obtendrás un cálculo transparente con desglose de todos los costes.  
+      </p>
+      <p>
+        Así podrás comparar, planificar mejor tu inversión y evitar sorpresas desagradables.  
+        La herramienta es solo una guía, pero te dará una visión mucho más clara del proceso.  
+      </p>
+    </section>
+
+  </main>
 
   <script>
     function calcular() {
@@ -106,13 +123,13 @@
         <p><b>Precio importación Dubái → España:</b> ${precioFinal.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</p>
         <p>Desglose importación:</p>
         <ul>
-          <li>Precio coche: ${precioEur.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li>Transporte: ${transporte} €</li>
-          <li>Arancel (10%): ${arancel.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+          <li class="precio">Precio coche: ${precioEur.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+          <li class="arancel">Arancel (10%): ${arancel.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
           <li>IVA (21%): ${iva.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li>Tasa matriculación: ${matriculacion.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+          <li class="matriculacion">Tasa matriculación: ${matriculacion.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+          <li>Transporte: ${transporte} €</li>
           <li>ITV y homologación: ${itv} €</li>
-          <li>Gastos extra: ${gastosExtra} €</li>
+          <li class="extra">Gastos extra: ${gastosExtra} €</li>
         </ul>
       `;
 
@@ -132,6 +149,5 @@
     }
   </script>
 
-  <!-- rebuild -->
 </body>
 </html>
