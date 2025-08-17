@@ -142,20 +142,6 @@
 
       if (btn) { btn.disabled = true; btn.textContent = "Enviando..."; }
 
-      // Enviar con EmailJS (IDs correctos)
-      emailjs.send('service_rsot1fm', 'template_mv0anj8', {
-        from_name:  nombre,   // Debe coincidir con {{from_name}} en tu plantilla
-        from_email: email,    // {{from_email}}
-        message:    mensaje   // {{message}}
-      })
-      .then(() => {
-        alert(`✅ Gracias ${nombre}. Hemos recibido tu solicitud.`);
-        if (btn) { btn.disabled = false; btn.textContent = "Enviar"; }
-      })
-      .catch(err => {
-        console.error('EmailJS ERROR:', err);
-        alert("❌ Error al enviar: " + (err?.text || JSON.stringify(err)));
-        if (btn) { btn.disabled = false; btn.textContent = "Enviar"; }
       });
     }
   </script>
