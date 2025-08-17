@@ -1,0 +1,33 @@
+<main style="max-width:700px; margin:40px auto; padding:20px; background:#fff; color:#0d3b66; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+  <h1 style="margin-top:0;">Contacto 📩</h1>
+  <p>Si estás pensando en importar un coche y quieres una estimación exacta, rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+  <!-- FORMULARIO FormSubmit -->
+  <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST" style="margin-top:20px;">
+    <input type="text" name="name" placeholder="Tu nombre" required 
+           style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
+
+    <input type="email" name="email" placeholder="Tu correo" required 
+           style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
+
+    <textarea name="message" placeholder="Escribe tu mensaje" required 
+              style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px; min-height:120px;"></textarea>
+
+    <!-- Redirección tras enviar -->
+    <input type="hidden" name="_next" value="https://calcoche.com/gracias.html">
+
+    <!-- Opcionales / seguridad -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="📩 Nueva solicitud desde la Calculadora">
+    <input type="text" name="_honey" style="display:none">
+
+    <button type="submit" 
+            style="background:#0d3b66; color:#fff; border:none; padding:12px 20px; border-radius:6px; cursor:pointer;">
+      Enviar
+    </button>
+  </form>
+
+  <div style="margin-top:30px; text-align:center;">
+    <a href="index.html" style="background:#0d3b66; color:#fff; padding:12px 20px; border-radius:6px; text-decoration:none;">Volver a la Calculadora</a>
+  </div>
+</main>
