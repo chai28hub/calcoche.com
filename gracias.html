@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>¡Gracias!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body style="display:flex; justify-content:center; align-items:center; min-height:100vh; background:#1e3c72; color:white; flex-direction:column;">
+<!-- FORMULARIO: FormSubmit -->
+<div id="contacto" class="contact-form" style="display:none;">
+  <h3>¿Quieres una estimación exacta?</h3>
+  <p>Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
 
-  <img src="favicon.png" alt="Calcoche Logo" width="120" style="margin-bottom:20px;">
-  <h1>✅ ¡Gracias por tu mensaje!</h1>
-  <p>Hemos recibido tu solicitud y te contactaremos pronto.</p>
+  <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
 
-  <a href="index.html" style="margin-top:20px; background:white; color:#1e3c72; padding:10px 20px; border-radius:8px; text-decoration:none;">
-    Volver a la calculadora
-  </a>
+    <!-- Redirección tras enviar -->
+    <input type="hidden" name="_next" value="https://calcoche.com/gracias.html">
 
-</body>
-</html>
+    <!-- Opcionales / seguridad -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="📩 Nueva solicitud desde la Calculadora">
+    <input type="text" name="_honey" style="display:none"> <!-- anti-bots -->
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
 
