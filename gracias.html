@@ -1,23 +1,52 @@
-<!-- FORMULARIO: FormSubmit -->
-<div id="contacto" class="contact-form" style="display:none;">
-  <h3>¿Quieres una estimación exacta?</h3>
-  <p>Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
-
-  <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
-
-    <!-- Redirección tras enviar -->
-    <input type="hidden" name="_next" value="https://calcoche.com/gracias.html">
-
-    <!-- Opcionales / seguridad -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="📩 Nueva solicitud desde la Calculadora">
-    <input type="text" name="_honey" style="display:none"> <!-- anti-bots -->
-
-    <button type="submit">Enviar</button>
-  </form>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias - Calcoche</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      background-color: #0d3b66;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .caja {
+      background: white;
+      color: #0d3b66;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 50px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .caja h1 {
+      margin-bottom: 20px;
+    }
+    .caja button {
+      background: #0d3b66;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .caja button:hover {
+      background: #09508f;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <h1>¡Gracias por tu mensaje! ✅</h1>
+    <p>Hemos recibido tu solicitud. Te contactaremos lo antes posible con la estimación exacta.</p>
+    <button onclick="window.location.href='index.html'">Volver a la Calculadora</button>
+  </div>
+</body>
+</html>
 
 
