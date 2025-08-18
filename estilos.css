@@ -243,5 +243,64 @@ textarea {
 }
   }
 
+/* ===== Top navigation ===== */
+.topnav {
+  position: sticky;     /* queda pegado arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  background: rgba(12, 42, 92, 0.9);   /* azul acorde a tu fondo */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.topnav a {
+  color: #eaf1ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.topnav a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.topnav .brand {
+  margin-right: auto;         /* empuja el resto de links a la derecha */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.topnav .brand img {
+  display: block;
+  border-radius: 50%;
+}
+
+/* Que el contenido no quede oculto bajo la barra sticky */
+body { scroll-padding-top: 70px; }
+
+/* Cuando saltas a un ancla, deja aire respecto a la barra */
+[id] { scroll-margin-top: 80px; }
+
+/* Si quieres ocultar el menú viejo de la columna izquierda sin borrarlo */
+.sidebar-nav, .left-menu, .old-nav { display: none !important; }
+
+/* Responsive simple */
+@media (max-width: 700px) {
+  .topnav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topnav a { padding: 8px 8px; }
+}
+
+
 
 
