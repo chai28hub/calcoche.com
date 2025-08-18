@@ -13,6 +13,40 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2994166354624544" crossorigin="anonymous"></script>
 </head>
 <body style="margin:0; font-family:Arial, sans-serif; background:#0d3b66;">
+<!-- Aviso de Cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0c2e5b; color: white; padding: 15px; text-align: center; font-size: 14px; z-index: 9999; display: none;">
+
+  Este sitio usa cookies propias y de terceros para mejorar la experiencia y mostrar anuncios relevantes. 
+  <a href="privacidad.html" style="color: #ffcc00; text-decoration: underline;">Más info</a>.
+  <br>
+  <button id="accept-cookies" style="margin-top: 10px; padding: 8px 15px; background: #ffcc00; border: none; cursor: pointer; font-weight: bold;">
+    Aceptar
+  </button>
+  <button id="reject-cookies" style="margin-top: 10px; padding: 8px 15px; background: #666; color: white; border: none; cursor: pointer;">
+    Rechazar
+  </button>
+</div>
+
+<script>
+  // Mostrar banner solo si aún no hay decisión guardada
+  window.onload = function() {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  };
+
+  // Aceptar cookies
+  document.getElementById("accept-cookies").onclick = function() {
+    localStorage.setItem("cookiesAccepted", "yes");
+    document.getElementById("cookie-banner").style.display = "none";
+  };
+
+  // Rechazar cookies
+  document.getElementById("reject-cookies").onclick = function() {
+    localStorage.setItem("cookiesAccepted", "no");
+    document.getElementById("cookie-banner").style.display = "none";
+  };
+</script>
 
   <!-- Anuncio superior -->
   <ins class="adsbygoogle"
