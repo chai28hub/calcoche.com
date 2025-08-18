@@ -226,33 +226,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.politica {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  color: #222222;
-  line-height: 1.7;
-  font-size: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
 
-.politica h1, 
-.politica h2, 
-.politica h3 {
-  color: #1e3c72; /* el azul de tu tema */
-  margin-bottom: 12px;
-}
-
-.politica p {
-  margin-bottom: 15px;
-}
-
-.politica ul {
-  margin: 15px 0;
-  padding-left: 22px;
-}
 
 
 
