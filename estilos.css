@@ -1,214 +1,79 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Fondo general */
 body {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #333;
+  min-height: 100vh;
+  /* ❌ NO centrar todo el body con flex */
+  /* display: flex; justify-content: center; align-items: center; */
+  padding: 20px 20px 40px; /* un poco de aire */
+  scroll-padding-top: 70px; /* para la barra sticky */
 }
 
-/* Contenedor principal */
-.calc-container {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    transition: 0.3s;
+/* ===== Top navigation ===== */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  margin: -20px -20px 20px;  /* se estira a lo ancho del viewport */
+  background: rgba(12, 42, 92, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-/* Títulos */
-.calc-container h2 {
-    margin-bottom: 20px;
-    color: #1e3c72;
-    font-size: 1.8em;
+.topnav .brand {
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #eaf1ff;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
 }
 
-/* Labels y selects/inputs */
-label {
-    display: block;
-    text-align: left;
-    margin: 15px 0 5px;
-    font-weight: 600;
-    color: #1e3c72;
+.topnav .brand img {
+  display: block;
+  width: 28px; height: 28px;
+  border-radius: 50%;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 12px;
-    font-size: 1em;
-    transition: 0.3s;
+.topnav a {
+  color: #eaf1ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
+.topnav a:hover { background: rgba(255,255,255,0.12); }
 
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #2a5298;
-    box-shadow: 0 0 5px rgba(42,82,152,0.5);
+/* Contenedor de página para centrar el grid */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-/* Botones */
-button {
-    background-color: #1e3c72;
-    color: #fff;
-    border: none;
-    padding: 14px 25px;
-    border-radius: 12px;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #2a5298;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* Resultados */
-.result {
-    background-color: #f0f4f8;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-    text-align: left;
-    word-wrap: break-word;
-}
-
-.result h3 {
-    color: #1e3c72;
-    margin-bottom: 10px;
-}
-
-.result p, .result li {
-    margin-bottom: 8px;
-    font-size: 0.95em;
-}
-
-.result ul {
-    padding-left: 20px;
-}
-
-/* Formulario de contacto */
-.contact-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.contact-form h3 {
-    color: #1e3c72;
-    margin-bottom: 10px;
-}
-
-.contact-form p {
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-textarea {
-    resize: none;
-    height: 80px;
-}
-
-/* Responsive - Móviles */
-@media (max-width: 600px) {
-    .calc-container {
-        padding: 20px 20px;
-        border-radius: 15px;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px 0;
-    }
-}
-/* ...mantener todo el CSS anterior... */
-
-/* Lista de desglose con colores e iconos */
-.result ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.result li {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    border-radius: 10px;
-    font-size: 0.95em;
-    display: flex;
-    align-items: center;
-}
-
-/* Colores según tipo de gasto */
-.result li.precio { background-color: #d0e6ff; color: #1e3c72; } /* azul */
-.result li.arancel { background-color: #d4f8d4; color: #2a7a2a; } /* verde */
-.result li.matriculacion { background-color: #ffe5b4; color: #b36b00; } /* naranja */
-.result li.extra { background-color: #ffd6d6; color: #b30000; } /* rojo */
-
-/* Emoji/icono al inicio de cada li */
-.result li::before {
-    content: "💰";
-    margin-right: 10px;
-}
-
-/* Cambiar emoji según clase */
-.result li.arancel::before { content: "📄"; }
-.result li.matriculacion::before { content: "🏷️"; }
-.result li.extra::before { content: "⚠️"; }
-
-/* Mejora visual del texto introductorio */
-.intro {
-  max-width: 820px;
-  margin: 24px auto;
-  color: #eaf1ff;              /* texto claro sobre fondo azul */
-  line-height: 1.6;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.08); /* cajita semitransparente */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.intro h2 {
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-/* añade al CSS para que no “salte” el layout mientras carga */
-.adsbygoogle { min-height: 90px; }
 
 /* Layout con 3 columnas: izquierda (texto), centro (calculadora), derecha (texto) */
 .layout {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 24px;
-  max-width: 1200px;
-  margin: 40px auto;
   align-items: start;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
-/* Los bloques de texto lateral */
+/* Bloques de texto lateral */
 .intro {
   color: #eaf1ff;
   line-height: 1.6;
@@ -219,86 +84,122 @@ textarea {
   padding: 20px;
 }
 
-/* Responsive: apila en móvil */
-@media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-  .intro, .calc-container {
-    margin-bottom: 20px;
-}
-.layout {
-  display: grid;
-  grid-template-columns: minmax(380px, 460px) 1fr;
-  gap: 32px;
-  align-items: start;
-  max-width: 1100px;
-  margin: 0 auto;
+/* Contenedor principal (calculadora) */
+.calc-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 500px;
+  justify-self: center;  /* centra la tarjeta en su columna */
+  text-align: center;
+  transition: .3s;
 }
 
-.layout .intro {
-  margin: 0;
-  opacity: 1; /* asegura que el texto no se vea clarito */
-  color: #ffffff; /* cámbialo según tu tema */
+/* Títulos */
+.calc-container h2 {
+  margin-bottom: 20px;
+  color: #1e3c72;
+  font-size: 1.8em;
 }
-  }
 
-/* ===== Top navigation ===== */
-.topnav {
-  position: sticky;     /* queda pegado arriba al hacer scroll */
-  top: 0;
-  z-index: 1000;
+/* Labels y inputs */
+label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  font-size: 1em;
+  transition: .3s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2a5298;
+  box-shadow: 0 0 5px rgba(42,82,152,.5);
+}
+
+/* Botón */
+button {
+  background-color: #1e3c72;
+  color: #fff;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #2a5298;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+/* Resultados */
+.result {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: left;
+  word-wrap: break-word;
+}
+.result h3 { color: #1e3c72; margin-bottom: 10px; }
+.result p, .result li { margin-bottom: 8px; font-size: .95em; }
+.result ul { padding-left: 0; list-style: none; }
+.result li {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: .95em;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 10px 16px;
-  background: rgba(12, 42, 92, 0.9);   /* azul acorde a tu fondo */
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
+.result li::before { content: "💰"; margin-right: 10px; }
+.result li.precio { background:#d0e6ff; color:#1e3c72; }
+.result li.arancel { background:#d4f8d4; color:#2a7a2a; }
+.result li.matriculacion { background:#ffe5b4; color:#b36b00; }
+.result li.extra { background:#ffd6d6; color:#b30000; }
+.result li.arancel::before { content:"📄"; }
+.result li.matriculacion::before { content:"🏷️"; }
+.result li.extra::before { content:"⚠️"; }
 
-.topnav a {
-  color: #eaf1ff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 10px;
-  border-radius: 8px;
+/* Formulario de contacto */
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  text-align: center;
 }
+.contact-form h3 { color:#1e3c72; margin-bottom:10px; }
+.contact-form p { font-size:.9em; margin-bottom:15px; }
+textarea { resize: none; height: 80px; }
 
-.topnav a:hover {
-  background: rgba(255,255,255,0.12);
-}
+/* Anuncios: evita saltos de layout */
+.adsbygoogle { min-height: 90px; }
 
-.topnav .brand {
-  margin-right: auto;         /* empuja el resto de links a la derecha */
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: .2px;
-}
+/* Ocultar cualquier menú viejo si queda en el HTML */
+.sidebar-nav, .left-menu, .old-nav, nav.left { display: none !important; }
 
-.topnav .brand img {
-  display: block;
-  border-radius: 50%;
-}
-
-/* Que el contenido no quede oculto bajo la barra sticky */
-body { scroll-padding-top: 70px; }
-
-/* Cuando saltas a un ancla, deja aire respecto a la barra */
-[id] { scroll-margin-top: 80px; }
-
-/* Si quieres ocultar el menú viejo de la columna izquierda sin borrarlo */
-.sidebar-nav, .left-menu, .old-nav { display: none !important; }
-
-/* Responsive simple */
-@media (max-width: 700px) {
-  .topnav {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .topnav a { padding: 8px 8px; }
+/* Responsive */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 16px; }
+  .calc-container { max-width: 600px; }
+  .topnav { flex-wrap: wrap; gap: 8px; }
+  .topnav a { padding: 8px; }
 }
 
 
