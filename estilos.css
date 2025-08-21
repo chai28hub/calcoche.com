@@ -308,37 +308,3 @@ footer a:hover {
 
 .topnav a:hover{ background: rgba(255,255,255,0.12); }
 
-/* Evita que la barra tape el primer bloque cuando es sticky */
-:root{ --nav-h: 58px; }
-@media (max-width: 420px){ :root{ --nav-h: 64px; } }
-body{ scroll-padding-top: var(--nav-h); }
-
-/* Ajustes específicos para móviles */
-@media (max-width: 700px){
-  .topnav{
-    padding: 8px 10px;
-    gap: 8px 10px;
-  }
-  .topnav a{
-    font-size: 14px;
-    height: 36px;
-    padding: 0 10px;
-  }
-}
-
-/* Opción extra (por si tienes muchísimos links): permitir scroll horizontal suave en pantallas muy pequeñas */
-@media (max-width: 360px){
-  .topnav{
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  .topnav::-webkit-scrollbar{ display:none; }
-}
-
-
-
-
-
-
-
-
