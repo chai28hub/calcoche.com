@@ -127,44 +127,47 @@
     </section>
   </main>
 
-  <script>
-    function calcular() {
-      const precioDubai = parseFloat(document.getElementById("precioDubai").value);
-      const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
-      if (!precioDubai) {
-        alert("Por favor introduce un precio válido.");
-        return;
-      }
-      // Conversión AED → EUR (aprox.)
-      const precioEur = precioDubai * 0.25;
-      // Costes fijos
-      const transporte = 1700;
-      const itv = 1620;
-      const gastosExtra = 1500;
-      // Cálculos
-      const arancel = (precioEur + transporte) * 0.10;
-      const iva = (precioEur + transporte + arancel) * 0.21;
-      const matriculacion = precioEur * tasaMatriculacion;
-      const precioFinal = precioEur + transporte + arancel + iva + matriculacion + itv + gastosExtra;
-      // Mostrar resultados
-      const res = document.getElementById("resultado");
-      res.style.display = "block";
-      res.innerHTML = `<h3 style="margin:0 0 8px;">Resultado del cálculo:</h3>
-        <p><b>Precio importación Dubái → España:</b> ${precioFinal.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</p>
-        <p style="margin:10px 0 6px;">Desglose importación:</p>
-        <ul style="margin:0 0 8px 18px;">
-          <li class="precio">Precio coche: ${precioEur.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li class="arancel">Arancel (10%): ${arancel.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li>IVA (21%): ${iva.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li class="matriculacion">Tasa matriculación: ${matriculacion.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-          <li>Transporte: ${transporte} €</li>
-          <li>ITV y homologación: ${itv} €</li>
-          <li class="extra">Gastos extra: ${gastosExtra} €</li>
-        </ul>`;
-      // mostrar formulario
-      document.getElementById("contacto").style.display = "block";
+<script>
+  function calcular() {
+    const precioDubai = parseFloat(document.getElementById("precioDubai").value);
+    const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
+
+    if (!precioDubai) {
+      alert("Por favor introduce un precio válido.");
+      return;
     }
-  </script>
+
+    const precioEur = precioDubai * 0.25;     // AED → EUR aprox
+    const transporte = 1700;
+    const itv = 1620;
+    const gastosExtra = 1500;
+
+    const arancel = (precioEur + transporte) * 0.10;
+    const iva = (precioEur + transporte + arancel) * 0.21;
+    const matriculacion = precioEur * tasaMatriculacion;
+    const precioFinal = precioEur + transporte + arancel + iva + matriculacion + itv + gastosExtra;
+
+    const res = document.getElementById("resultado");
+    res.style.display = "block";
+    res.innerHTML = `
+      <h3 style="margin:0 0 8px;">Resultado del cálculo:</h3>
+      <p><b>Precio importación Dubái → España:</b> ${precioFinal.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</p>
+      <p style="margin:10px 0 6px;">Desglose importación:</p>
+      <ul style="margin:0 0 8px 18px; padding-left:0; list-style:none;">
+        <li class="precio">Precio coche: ${precioEur.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+        <li class="arancel">Arancel (10%): ${arancel.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+        <li>IVA (21%): ${iva.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+        <li class="matriculacion">Tasa matriculación: ${matriculacion.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
+        <li>Transporte: ${transporte} €</li>
+        <li>ITV y homologación: ${itv} €</li>
+        <li class="extra">Gastos extra: ${gastosExtra} €</li>
+      </ul>
+    `;
+
+    document.getElementById("contacto").style.display = "block";
+  }
+</script>
+
 
   <footer>
     <p>&copy; 2025 Calculadora Importación Dubái → España</p>
