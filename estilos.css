@@ -275,6 +275,67 @@ footer a:hover {
 }
 .germany-optin button:hover { filter: brightness(0.95); }
 
+/* ===== Barra de navegación (desktop + móvil) ===== */
+.topnav{
+  position: sticky;          /* fija arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;           /* permite saltar a 2 filas si no cabe */
+  justify-content: center;   /* centrado bonito */
+  gap: 10px 12px;            /* espacio entre botones */
+  padding: 10px 14px;
+  background: rgba(10,42,74,0.95);  /* tu azul */
+  backdrop-filter: blur(6px);       /* cristalino */
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.topnav a{
+  color: #eaf1ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 38px;         /* área táctil cómoda */
+  padding: 0 12px;
+  border-radius: 8px;
+  white-space: nowrap;  /* evita cortes feos */
+}
+
+.topnav a:hover{ background: rgba(255,255,255,0.12); }
+
+/* Evita que la barra tape el primer bloque cuando es sticky */
+:root{ --nav-h: 58px; }
+@media (max-width: 420px){ :root{ --nav-h: 64px; } }
+body{ scroll-padding-top: var(--nav-h); }
+
+/* Ajustes específicos para móviles */
+@media (max-width: 700px){
+  .topnav{
+    padding: 8px 10px;
+    gap: 8px 10px;
+  }
+  .topnav a{
+    font-size: 14px;
+    height: 36px;
+    padding: 0 10px;
+  }
+}
+
+/* Opción extra (por si tienes muchísimos links): permitir scroll horizontal suave en pantallas muy pequeñas */
+@media (max-width: 360px){
+  .topnav{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .topnav::-webkit-scrollbar{ display:none; }
+}
+
+
 
 
 
