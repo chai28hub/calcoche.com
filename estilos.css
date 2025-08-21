@@ -226,6 +226,54 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Bloque interés Alemania */
+.germany-optin { margin-top: 18px; }
+.germany-optin .q {
+  color: #0a2a4a;               /* azul oscuro, se lee en fondo blanco */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.germany-optin .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.germany-optin input[type="email"] {
+  width: 260px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #9aa8c0;
+  background: #ffffff !important;     /* blanco puro */
+  color: #0a2a4a !important;          /* texto oscuro */
+  font-size: 14px;
+}
+
+.germany-optin input::placeholder {
+  color: #6b7280;      /* gris medio para que se vea */
+  opacity: 1;
+}
+
+/* Evita “texto blanco” de autocompletar en Safari/Chrome */
+.germany-optin input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+  -webkit-text-fill-color: #0a2a4a !important;
+  caret-color: #0a2a4a;
+}
+
+.germany-optin button {
+  background: #ffcc00;    /* amarillo del sitio */
+  color: #0a2a4a;         /* texto oscuro para contraste AA */
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.germany-optin button:hover { filter: brightness(0.95); }
 
 
 
