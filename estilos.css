@@ -308,40 +308,63 @@ footer a:hover {
 
 .topnav a:hover{ background: rgba(255,255,255,0.12); }
 
-/* Intro Home */
-.home-intro{
+/* Intro de la Home */
+.home-intro {
   max-width: 980px;
   margin: 24px auto 32px;
-  padding: 22px 24px;
+  padding: 24px;
   background: #ffffff;
   color: #0d3b66;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
   line-height: 1.65;
 }
-.home-intro h1, .home-intro h2{ color:#0d3b66; margin: 0 0 12px; }
-.home-intro a{ color:#0d3b66; text-decoration: underline; font-weight: 600; }
-.home-intro .home-note{ font-size:.95rem; color:#244; margin-top:8px; }
-.home-intro .home-updated{ font-size:.9rem; color:#466; margin-top:10px; }
+
+.home-intro h1,
+.home-intro h2 {
+  color: #0d3b66;
+  margin: 0 0 12px;
+}
+
+.home-intro a {
+  color: #0d3b66;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.home-intro .note {
+  font-size: .95rem;
+  color: #244;
+  margin-top: 8px;
+}
+
+.home-intro .updated {
+  font-size: .9rem;
+  color: #466;
+  margin-top: 10px;
+}
 
 /* Tabla del ejemplo */
-.home-table{
-  width:100%;
+.home-table {
+  width: 100%;
   border-collapse: collapse;
-  background:#fff;
+  background: #fff;
   margin: 8px 0 12px;
 }
-.home-table th, .home-table td{
-  border:1px solid #e2e8f0;
-  padding:10px 12px;
-  text-align:left;
+
+.home-table th,
+.home-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 12px;
+  text-align: left;
 }
-.home-table th{ background:#f7fafc; }
+
+.home-table th {
+  background: #f7fafc;
+}
 
 /* Responsive */
-@media (max-width: 640px){
-  .home-intro{ padding:16px; border-radius:10px; }
-  .home-table{ font-size:14px; }
+@media (max-width: 640px) {
+  .home-intro { padding: 16px; border-radius: 10px; }
+  .home-table { font-size: 14px; }
 }
-
-
