@@ -504,6 +504,15 @@ main.page {
   display: block;
   margin: 20px auto 0;
 }
+.home-img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
