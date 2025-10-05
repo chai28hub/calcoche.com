@@ -489,6 +489,22 @@ main.page .btn.btn-secondary{ background:#205a96; }
 /* Botones dentro de páginas de contenido */
 main.page .btn{ color:#fff !important; }
 main.page .btn.btn-secondary{ background:#205a96; color:#fff !important; }
+/* Centrar mejor el contenido de las páginas internas */
+main.page {
+  max-width: 720px;          /* más estrecho, se centra mejor */
+  margin: 40px auto;
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+/* Centrar el botón del formulario */
+.contact-form button {
+  display: block;
+  margin: 20px auto 0;
+}
+
 
 
 
