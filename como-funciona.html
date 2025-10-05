@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" type="image/png" href="logo.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cómo funciona - Calcoche</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo funciona – calcoche.com</title>
+  <meta name="description" content="Guía paso a paso para usar la calculadora de importación: datos que necesitas, cómo se calculan CIF, arancel, IVA, IEDMT e ITV, con ejemplo completo." />
+  <link rel="canonical" href="https://calcoche.com/como-funciona.html" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="estilos.css" />
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KN51HWM8XK');
-</script>
-    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN51HWM8XK');
+  </script>
 </head>
-
-<style>
-  .footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    background: rgba(12, 42, 92, 0.9);
-    color: #eaf1ff;
-    font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-  }
-
-  .footer a {
-    color: #eaf1ff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
-</style>
-
 <body>
-  
-  <main style="max-width:900px; margin:40px auto; padding:20px; background:#fff; color:#0d3b66; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
-  <h1 style="margin-top:0;">Cómo funciona la importación desde Dubái a España 🚗</h1>
-  <p>Importar un vehículo desde Dubái a España es un proceso que requiere cumplir una serie de pasos legales, logísticos y fiscales. Aquí te explicamos de manera sencilla cómo funciona:</p>
 
-  <h2>1. Compra en Dubái</h2>
-  <p>El primer paso es elegir el vehículo y formalizar la compra. El precio se establece en dirhams (AED) y será la base para todos los cálculos posteriores.</p>
+  <main class="page">
+    <h1>Cómo funciona la calculadora de importación (Dubái → España)</h1>
+    <p>
+      Esta guía te explica, de forma sencilla, <strong>qué datos necesitas</strong>, <strong>cómo introducirlos</strong>
+      y <strong>cómo interpretamos el resultado</strong>. La herramienta estima los principales conceptos:
+      <a href="impuestos.html#arancel">arancel</a>, <a href="impuestos.html#iva">IVA</a>,
+      <a href="impuestos.html#iedmt">IEDMT</a>, <a href="impuestos.html#tasas">ITV y tasas</a>.
+    </p>
 
-  <h2>2. Transporte marítimo</h2>
-  <p>El coche se envía por barco hasta un puerto español. El coste medio ronda los <strong>1.500 - 2.000 €</strong>, y el tiempo de envío es de 4 a 6 semanas.</p>
+    <h2>1) Qué datos necesitas</h2>
+    <ul>
+      <li><strong>Precio del coche en origen</strong> (en AED si es Dubái).</li>
+      <li><strong>Transporte/seguro</strong> hasta España (si no lo sabes, usa una estimación conservadora).</li>
+      <li><strong>Emisiones de CO₂</strong> (para calcular el IEDMT por tramos).</li>
+    </ul>
 
-  <h2>3. Arancel de importación (10%)</h2>
-  <p>Al entrar a la Unión Europea, el vehículo paga un arancel del 10% sobre el valor del coche más el transporte.</p>
+    <h2>2) Paso a paso (uso de la herramienta)</h2>
+    <ol>
+      <li>Introduce el <em>precio de compra</em> del vehículo.</li>
+      <li>Selecciona el <em>tramo de emisiones de CO₂</em> correspondiente.</li>
+      <li>La calculadora estima: <strong>CIF → Arancel → Base de IVA → IVA → ITV/tasas → IEDMT</strong>.</li>
+      <li>Obtienes un <strong>total orientativo</strong> para comparar antes de decidir.</li>
+    </ol>
 
-  <h2>4. IVA (21%)</h2>
-  <p>El IVA se aplica sobre el total acumulado: coche + transporte + arancel. Es uno de los impuestos más importantes del proceso.</p>
+    <h2>3) Qué significa cada concepto</h2>
+    <ul>
+      <li><strong>CIF</strong>: precio + transporte + seguro hasta puerto español.</li>
+      <li><strong>Arancel</strong>: porcentaje aplicado al CIF (referencia habitual 10% en extracomunitario).</li>
+      <li><strong>IVA de importación</strong>: 21% sobre <em>CIF + arancel</em> (y, si aplica, gastos de despacho).</li>
+      <li><strong>IEDMT</strong>: depende de CO₂ (ver <a href="impuestos.html#iedmt">tramos</a>).</li>
+      <li><strong>ITV y tasas</strong>: inspección, matriculación y expedición de permiso.</li>
+    </ul>
 
-  <h2>5. Tasa de matriculación</h2>
-  <p>Depende de las emisiones de CO₂ del vehículo. Los coches más contaminantes pueden pagar hasta un 14,75% del valor en matriculación.</p>
+    <h2>4) Ejemplo guiado (cifras orientativas)</h2>
+    <p>Vehículo adquirido en Dubái por <strong>AED 50.000</strong> (≈ 12.500 €) con transporte/seguro (CIF) de 1.200 €.</p>
+    <table class="table">
+      <tr><th>Concepto</th><th>Cálculo</th><th>Importe</th></tr>
+      <tr><td>CIF</td><td>12.500 + 1.200</td><td>13.700 €</td></tr>
+      <tr><td>Arancel (10%)</td><td>13.700 × 0,10</td><td>1.370 €</td></tr>
+      <tr><td>Base IVA</td><td>13.700 + 1.370</td><td>15.070 €</td></tr>
+      <tr><td>IVA (21%)</td><td>15.070 × 0,21</td><td>3.165 €</td></tr>
+      <tr><td>ITV + tasas</td><td>—</td><td>200–300 €</td></tr>
+      <tr><td>IEDMT</td><td>Según tramo de CO₂</td><td>0%–14,75%</td></tr>
+      <tr><td>Gestoría/Despacho</td><td>—</td><td>200–400 €</td></tr>
+    </table>
+    <p class="note">Total orientativo sin IEDMT: <strong>~ 18.900 €</strong>. El IEDMT dependerá del tramo de emisiones.</p>
 
-  <h2>6. ITV y homologación</h2>
-  <p>Para poder circular en España, el coche debe pasar la inspección técnica y, en muchos casos, un proceso de homologación. Esto garantiza que cumple la normativa europea.</p>
+    <h2>5) Consejos útiles</h2>
+    <ul>
+      <li>Si desconoces el transporte, usa una cifra prudente para no infraestimar.</li>
+      <li>Verifica las emisiones en la documentación del vehículo.</li>
+      <li>El resultado es <strong>orientativo</strong>; algunos importes dependen de proveedores y normativa vigente.</li>
+    </ul>
 
-  <h2>7. Gastos adicionales</h2>
-  <p>Se incluyen gestoría, matriculación, placas y otros trámites administrativos. Estos gastos suelen sumar alrededor de <strong>1.500 €</strong>.</p>
+    <div class="cta">
+      <a class="btn" href="index.html">Volver a la calculadora</a>
+      <a class="btn btn-secondary" href="explicacion.html">Ver metodología completa</a>
+    </div>
+  </main>
 
-  <p style="margin-top:20px;">En total, el coste final puede ser hasta el doble del precio original del coche en Dubái. Por eso, la <a href="index.html">calculadora</a> es tan útil: te da una estimación clara antes de lanzarte a la importación.</p>
+  <footer class="site-footer">
+    <a href="index.html">Inicio</a> ·
+    <a href="como-funciona.html">Cómo funciona</a> ·
+    <a href="explicacion.html">Método</a> ·
+    <a href="impuestos.html">Impuestos</a> ·
+    <a href="faq.html">Preguntas y respuestas</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="privacidad.html">Privacidad</a>
+  </footer>
 
-  <div style="margin-top:30px; text-align:center;">
-    <a href="index.html" style="background:#0d3b66; color:#fff; padding:12px 20px; border-radius:6px; text-decoration:none;">Volver a la Calculadora</a>
-  </div>
-</main>
-    <footer class="footer">
-  <p>© 2025 · <a href="privacidad.html">Política de Privacidad</a></p>
-</footer>
 </body>
-
 </html>
