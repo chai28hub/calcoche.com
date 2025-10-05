@@ -486,3 +486,9 @@ main.page .btn.btn-secondary{ background:#205a96; }
 .site-footer a{ color:#0d3b66 !important; text-decoration:none; margin:0 8px; }
 .site-footer a:hover{ text-decoration:underline; }
 
+/* Botones dentro de páginas de contenido */
+main.page .btn{ color:#fff !important; }
+main.page .btn.btn-secondary{ background:#205a96; color:#fff !important; }
+
+
+
