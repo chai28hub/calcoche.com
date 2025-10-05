@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cómo funciona - Calcoche</title>
-    <link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto – calcoche.com</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="estilos.css?v=6" />
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KN51HWM8XK');
-</script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN51HWM8XK');
+  </script>
 </head>
-  <footer class="footer">
-  <p>© 2025 · <a href="privacidad.html">Política de Privacidad</a></p>
-</footer>
-
-<style>
-  .footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    background: rgba(12, 42, 92, 0.9);
-    color: #eaf1ff;
-    font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-  }
-
-  .footer a {
-    color: #eaf1ff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
-</style>
-
 <body>
 
-<main style="max-width:700px; margin:40px auto; padding:20px; background:#fff; color:#0d3b66; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
-  <h1 style="margin-top:0;">Contacto 📩</h1>
-  <p>Si estás pensando en importar un coche y quieres una estimación exacta, rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+  <!-- Barra superior (misma que en el resto) -->
+  <nav class="topnav">
+    <a class="brand" href="index.html">calcoche.com</a>
+    <a href="index.html">Inicio</a>
+    <a href="como-funciona.html">Cómo funciona</a>
+    <a href="explicacion.html">Método</a>
+    <a href="impuestos.html">Impuestos</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="privacidad.html">Privacidad</a>
+  </nav>
 
-  <!-- FORMULARIO FormSubmit -->
-  <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST" style="margin-top:20px;">
-    <input type="text" name="name" placeholder="Tu nombre" required 
-           style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
+  <!-- Contenido principal en “tarjeta blanca” -->
+  <main class="page">
+    <h1>Contacto</h1>
+    <p>¿Tienes dudas o sugerencias sobre la calculadora? Escríbenos y te responderemos lo antes posible.</p>
 
-    <input type="email" name="email" placeholder="Tu correo" required 
-           style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
+    <!-- Formulario a tu estilo -->
+    <form class="contact-form" method="post" action="#" autocomplete="on" novalidate>
+      <!-- Honeypot anti-spam (oculto) -->
+      <input type="text" name="empresa" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <textarea name="message" placeholder="Escribe tu mensaje" required 
-              style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px; min-height:120px;"></textarea>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre">
 
-    <!-- Redirección tras enviar -->
-    <input type="hidden" name="_next" value="https://calcoche.com/gracias.html">
+      <label for="email">Correo electrónico</label>
+      <input id="email" name="email" type="email" required placeholder="tucorreo@ejemplo.com">
 
-    <!-- Opcionales / seguridad -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="📩 Nueva solicitud desde la Calculadora">
-    <input type="text" name="_honey" style="display:none">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
 
-    <button type="submit" 
-            style="background:#0d3b66; color:#fff; border:none; padding:12px 20px; border-radius:6px; cursor:pointer;">
-      Enviar
-    </button>
-  </form>
+      <button type="submit">Enviar</button>
+    </form>
 
-  <div style="margin-top:30px; text-align:center;">
-    <a href="index.html" style="background:#0d3b66; color:#fff; padding:12px 20px; border-radius:6px; text-decoration:none;">Volver a la Calculadora</a>
-  </div>
-</main>
+    <p style="margin-top:14px">
+      También puedes escribirnos directamente a:
+      <a href="mailto:info@calcoche.com">info@calcoche.com</a>
+    </p>
+
+    <p style="margin-top:10px; font-size:.95rem;">
+      <strong>Transparencia:</strong> calcoche.com es un proyecto informativo independiente. No vendemos vehículos ni prestamos servicios de importación; ofrecemos cálculos y guías orientativas para ayudarte a decidir con más claridad.
+    </p>
+  </main>
+
+  <!-- Footer global con todos los enlaces (visible en todas las páginas) -->
+  <footer class="site-footer">
+    <a href="index.html">Inicio</a> ·
+    <a href="como-funciona.html">Cómo funciona</a> ·
+    <a href="explicacion.html">Método</a> ·
+    <a href="impuestos.html">Impuestos</a> ·
+    <a href="faq.html">Preguntas y respuestas</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="privacidad.html">Privacidad</a>
+  </footer>
+
+  <!-- (Opcional) Evitar envío real mientras no haya backend -->
+  <script>
+    document.querySelector('.contact-form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('¡Gracias! Mensaje enviado (demo). Configura un backend o EmailJS para envíos reales.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
