@@ -7,10 +7,10 @@
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="estilos.css" />
 
-  <!-- Google AdSense (Tu código original) -->
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2994166354624544" crossorigin="anonymous"></script>
 
-  <!-- Google tag (gtag.js) (Tu código original) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +22,6 @@
 
 <body style="margin:0; font-family:Arial, sans-serif; background:#0d3b66; color: white;">
 
-  <!-- Menú de navegación -->
   <nav style="background:#0a2a4a; padding:12px; text-align:center;">
     <a href="index.html" style="color:#fff; margin: 12px; text-decoration:none; font-weight:bold;">Inicio</a>
     <a href="como-funciona.html" style="color:#fff; margin: 12px; text-decoration:none;">Cómo funciona</a>
@@ -31,27 +30,20 @@
     <a href="contacto.html" style="color:#fff; margin: 12px; text-decoration:none;">Contacto</a>
   </nav>
 
-  <!-- CONTENEDOR PRINCIPAL -->
   <main class="layout" style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; max-width:1100px; margin:0 auto; padding:16px;">
 
     <!-- IZQUIERDA: INTRO -->
     <section class="intro" style="flex:1; min-width:280px;">
       <h2 style="margin-top:0;">CALCULADORA APROXIMACIÓN</h2>
       
-      <!-- FOTO CORREGIDA A .PNG -->
       <img src="calcoche.png" alt="Coche de Dubái" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 20px;">
       
       <h2>¿Importar un coche de Dubái a España? 🚗</h2>
-      <p>Que no te engañen con precios inflados. Hay muchas páginas y personas que ofrecen presupuestos exagerados para traer un coche desde Dubái.</p>
+      <p>Nuestra misión es ayudarte a entender de manera clara cuáles son los gastos reales que intervienen en el proceso.</p>
       
       <a href="explicacion.html" target="_blank" rel="noopener" style="display:inline-block; margin-top:15px; color:#00cfff; text-decoration:underline;">
          Ver explicación detallada
       </a>
-
-      <div class="home-intro" style="margin-top: 40px;">
-        <h1>Importar un coche de Dubái a España: cálculo orientativo</h1>
-        <p>En <strong>calcoche.com</strong> te damos una estimación realista de aranceles, IVA e impuestos.</p>
-      </div>
     </section>
 
     <!-- DERECHA: CALCULADORA -->
@@ -59,7 +51,6 @@
       <div class="calc-container" style="background:#fff; color:#0d3b66; padding:24px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
         <h2 style="margin-top:0;">Calculadora Dubái → España</h2>
 
-        <!-- Tu anuncio de AdSense dentro de la calculadora -->
         <ins class="adsbygoogle" style="display:block; min-height:90px; margin:8px 0 18px"
              data-ad-client="ca-pub-2994166354624544"
              data-ad-slot="6469166770"
@@ -79,12 +70,14 @@
         </select>
 
         <button onclick="calcular()" style="width:100%; background:#0d3b66; color:#fff; border:none; padding:15px; border-radius:6px; cursor:pointer; font-weight:bold;">CALCULAR PRECIO FINAL</button>
-        <div id="resultado" style="display:none; margin-top:16px; padding:15px; background:#f0f7ff; border-radius:6px;"></div>
+        
+        <!-- CUADRO BLANCO DETALLADO -->
+        <div id="resultado" style="display:none; margin-top:16px; padding:20px; background:#f9f9f9; border: 1px solid #ddd; border-radius:6px; font-size: 0.9em; line-height: 1.6;">
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Aviso de Cookies (Tu original corregido) -->
   <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0c2e5b; color: white; padding: 15px; text-align: center; display: none; z-index: 9999;">
     Este sitio usa cookies propias y de terceros. <br>
     <button id="accept-cookies" style="margin-top: 10px; background: #ffcc00; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold;">Aceptar</button>
@@ -103,23 +96,37 @@
 
     function calcular() {
       const precioDubai = parseFloat(document.getElementById("precioDubai").value);
-      const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
-      if (!precioDubai) return alert("Por favor introduce un precio válido.");
+      const tasaMatriculacionPct = parseFloat(document.getElementById("co2").value);
+      if (!precioDubai) return alert("Por favor introduce un precio.");
 
+      // Cálculos
       const precioEur = precioDubai * 0.25;
-      const arancel = (precioEur + 1700) * 0.10;
-      const iva = (precioEur + 1700 + arancel) * 0.21;
-      const total = precioEur + arancel + iva + 1700 + 1620 + 1500 + (precioEur * tasaMatriculacion);
+      const flete = 1700;
+      const baseAduana = precioEur + flete;
+      const arancel = baseAduana * 0.10;
+      const iva = (baseAduana + arancel) * 0.21;
+      const impuestoMatriculacion = precioEur * tasaMatriculacionPct;
+      const otrosGastos = 1620 + 1500; // Aduana, puerto, ficha técnica, etc.
+      
+      const total = precioEur + arancel + iva + flete + otrosGastos + impuestoMatriculacion;
 
       const res = document.getElementById("resultado");
       res.style.display = "block";
-      res.innerHTML = `<strong>Total estimado: ${total.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</strong>`;
+      res.innerHTML = `
+        <h3 style="margin-top:0; color:#0d3b66;">Desglose estimado:</h3>
+        <p><strong>Valor del coche:</strong> ${precioEur.toLocaleString('es-ES')} €</p>
+        <p><strong>Arancel (10%):</strong> ${arancel.toLocaleString('es-ES')} €</p>
+        <p><strong>IVA Importación (21%):</strong> ${iva.toLocaleString('es-ES')} €</p>
+        <p><strong>Impuesto Matriculación:</strong> ${impuestoMatriculacion.toLocaleString('es-ES')} €</p>
+        <p><strong>Transporte y Gestión:</strong> ${(flete + otrosGastos).toLocaleString('es-ES')} €</p>
+        <hr style="border:0; border-top:1px solid #ccc;">
+        <p style="font-size:1.2em; color:#0d3b66;"><strong>TOTAL FINAL: ${total.toLocaleString('es-ES')} €</strong></p>
+      `;
     }
   </script>
 
-  <!-- Tu Footer AdSense -->
   <footer style="text-align: center; padding: 20px;">
-    <p>&copy; 2025 calcoche.com</p>
+    <p>&copy; 2026 calcoche.com</p>
     <ins class="adsbygoogle" style="display:block; min-height:90px; margin:12px 0"
        data-ad-client="ca-pub-2994166354624544"
        data-ad-slot="3315270269"
