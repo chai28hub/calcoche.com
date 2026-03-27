@@ -5,10 +5,23 @@
   <title>Calculadora Importación Dubái → España</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="logo.png">
-  <!-- (opcional) tu hoja de estilos -->
   <link rel="stylesheet" href="estilos.css" />
 
-   <!-- Menú de navegación -->
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2994166354624544" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KN51HWM8XK');
+  </script>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#0d3b66; color: white;">
+
+  <!-- Menú de navegación -->
   <nav style="background:#0a2a4a; padding:12px; text-align:center;">
     <a href="index.html" style="color:#fff; margin: 12px; text-decoration:none; font-weight:bold;">Inicio</a>
     <a href="como-funciona.html" style="color:#fff; margin: 12px; text-decoration:none;">Cómo funciona</a>
@@ -17,132 +30,41 @@
     <a href="contacto.html" style="color:#fff; margin: 12px; text-decoration:none;">Contacto</a>
   </nav>
 
-  <!-- Aviso de Cookies -->
-  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0c2e5b; color: white; padding: 15px; text-align: center; font-size: 14px; z-index: 9999; display: none;">
-    Este sitio usa cookies propias y de terceros para mejorar la experiencia y mostrar anuncios relevantes.
-    <a href="privacidad.html" style="color: #ffcc00; text-decoration: underline;">Más info</a>.
-    <br>
-    <button id="accept-cookies" style="margin-top: 10px; padding: 8px 15px; background: #ffcc00; border: none; cursor: pointer; font-weight: bold;">Aceptar</button>
-    <button id="reject-cookies" style="margin-top: 10px; padding: 8px 15px; background: #666; color: white; border: none; cursor: pointer;">Rechazar</button>
-  </div>
-  <script>
-    // Mostrar banner solo si aún no hay decisión guardada
-    window.onload = function() {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        document.getElementById("cookie-banner").style.display = "block";
-      }
-    };
-    // Aceptar cookies
-    document.getElementById("accept-cookies").onclick = function() {
-      localStorage.setItem("cookiesAccepted", "yes");
-      document.getElementById("cookie-banner").style.display = "none";
-    };
-    // Rechazar cookies
-    document.getElementById("reject-cookies").onclick = function() {
-      localStorage.setItem("cookiesAccepted", "no");
-      document.getElementById("cookie-banner").style.display = "none";
-    };
-  </script>
-
-  <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS -->
+  <!-- CONTENEDOR PRINCIPAL -->
   <main class="layout" style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; max-width:1100px; margin:0 auto; padding:16px;">
 
     <!-- IZQUIERDA: INTRO -->
-    <section class="intro" style="flex:1; min-width:280px; color:#fff; opacity:1;">
+    <section class="intro" style="flex:1; min-width:280px;">
       <h2 style="margin-top:0;">CALCULADORA APROXIMACIÓN</h2>
-      <img src="imagenes/calcoche.jpg" alt="Coche de Dubái listo para exportar a España" class="home-img">
+      
+      <!-- FOTO -->
+      <img src="calcoche.png" alt="Coche de Dubái" style="max-width: 100%; height: auto; border-radius: 8px;">
+      
       <h2>¿Importar un coche de Dubái a España? 🚗</h2>
       <p>Que no te engañen con precios inflados. Hay muchas páginas y personas que ofrecen presupuestos exagerados para traer un coche desde Dubái.</p>
-      <p>Nuestra misión es ayudarte a entender de manera clara y sencilla cuáles son los gastos reales que intervienen. Con la calculadora tendrás una referencia aproximada y realista antes de decidir.</p>
-       <!-- Aquí va el enlace -->
-  <a href="explicacion.html" target="_blank" rel="noopener"
-     style="display:inline-block; margin-top:15px; color:#00cfff; text-decoration:underline;">
-     Ver explicación detallada
-  </a>
+      <p>Nuestra misión es ayudarte a entender de manera clara y sencilla cuáles son los gastos reales que intervienen.</p>
+      <a href="explicacion.html" target="_blank" rel="noopener" style="display:inline-block; margin-top:15px; color:#00cfff; text-decoration:underline;">
+         Ver explicación detallada
+      </a>
+
+      <div class="home-intro" style="margin-top: 40px;">
+        <h1>Importar un coche de Dubái a España: cálculo orientativo</h1>
+        <p>En <strong>calcoche.com</strong> te damos una estimación realista de aranceles, IVA e impuestos.</p>
+        <table style="width:100%; border-collapse: collapse; margin-top: 20px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <tr style="border-bottom: 1px solid #fff;"><th style="padding: 10px; text-align: left;">Concepto</th><th style="padding: 10px; text-align: right;">Importe aprox.</th></tr>
+            <tr><td style="padding: 10px;">Arancel (10%)</td><td style="padding: 10px; text-align: right;">1.370 €</td></tr>
+            <tr><td style="padding: 10px;">IVA (21%)</td><td style="padding: 10px; text-align: right;">3.165 €</td></tr>
+        </table>
+      </div>
     </section>
 
-     <!-- Google AdSense (cargar una sola vez) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2994166354624544" crossorigin="anonymous"></script>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN51HWM8XK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KN51HWM8XK');
-</script>
-    
-</head>
-<body style="margin:0; font-family:Arial, sans-serif; background:#0d3b66;">
-
-<section class="home-intro">
-  <h1>Importar un coche de Dubái a España: cálculo orientativo y transparente</h1>
-
-  <p>
-    En <strong>calcoche.com</strong> te damos una <strong>estimación realista</strong> de los costes de importación
-    (aranceles, IVA, IEDMT, ITV y tasas). Revisa el método en
-    <a href="/explicacion.html">Explicación del método</a> y en <a href="/como-funciona.html">Cómo funciona</a>.
-  </p>
-
-  <h2>Qué incluye la estimación</h2>
-  <ul>
-    <li><a href="/impuestos.html">Impuestos y tasas</a> principales (arancel, IVA importación, IEDMT, tasas de Tráfico, ITV).</li>
-    <li>Conceptos habituales como transporte y gestoría.</li>
-    <li>Un resultado orientativo para comparar alternativas antes de comprar.</li>
-  </ul>
-
-  <h2>Ejemplo rápido (cifras orientativas)</h2>
-  <p>Vehículo en Dubái por <strong>AED 50.000</strong> (≈ 12.500 €) con transporte CIF 1.200 €.</p>
-
-  <table class="home-table">
-    <tr><th>Concepto</th><th>Cálculo</th><th>Importe aprox.</th></tr>
-    <tr><td>CIF</td><td>12.500 + 1.200</td><td>13.700 €</td></tr>
-    <tr><td>Arancel (10%)</td><td>13.700 × 0,10</td><td>1.370 €</td></tr>
-    <tr><td>Base IVA</td><td>13.700 + 1.370</td><td>15.070 €</td></tr>
-    <tr><td>IVA importación (21%)</td><td>15.070 × 0,21</td><td>3.165 €</td></tr>
-    <tr><td>ITV + tasas</td><td>—</td><td>200–300 €</td></tr>
-    <tr><td>IEDMT</td><td>Según emisiones</td><td>0%–14,75%</td></tr>
-    <tr><td>Gestoría</td><td>—</td><td>200–400 €</td></tr>
-    <tr><th colspan="2" style="text-align:right">Total aprox. (sin IEDMT)</th><th>~ 18.900 €</th></tr>
-  </table>
-
-  <p class="note">
-    Nota: son cifras ilustrativas. El resultado depende de documentación, emisiones y normativa aplicable.
-    Consulta más en la <a href="/faq.html">FAQ</a>.
-  </p>
-
-  <h2>Antes de usar la calculadora</h2>
-  <ul>
-    <li>Ten precio de compra, transporte previsto y emisiones CO₂ del vehículo.</li>
-    <li>Recuerda que es una <strong>estimación orientativa</strong>.</li>
-    <li>Si tienes dudas, <a href="/contacto.html">contáctanos</a>.</li>
-  </ul>
-
-  <p class="updated">Última actualización: <strong>septiembre 2025</strong>.</p>
-</section>
-
-
-
-
-    <!-- DERECHA: CALCULADORA + FORMULARIO + TEXTO EXPLICATIVO -->
+    <!-- DERECHA: CALCULADORA -->
     <section style="flex:1; min-width:360px;">
-
-      <!-- Calculadora -->
       <div class="calc-container" style="background:#fff; color:#0d3b66; padding:24px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
-        <h2 style="margin-top:0;">Calculadora Importación Dubái → España</h2>
-
-        <!-- Anuncio dentro de la tarjeta -->
-        <ins class="adsbygoogle" style="display:block; min-height:90px; margin:8px 0 18px"
-             data-ad-client="ca-pub-2994166354624544"
-             data-ad-slot="6469166770"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-        <label>Precio del coche en Dubái (AED):</label>
-        <input type="number" id="precioDubai" placeholder="Introduce precio en AED" required step="0.01" inputmode="decimal" autocomplete="off" style="width:100%; padding:12px; margin:8px 0 12px; border:1px solid #ccc; border-radius:6px;" />
+        <h2 style="margin-top:0;">Calculadora Dubái → España</h2>
+        
+        <label>Precio del coche (AED):</label>
+        <input type="number" id="precioDubai" placeholder="Precio en AED" style="width:100%; padding:12px; margin:8px 0; border:1px solid #ccc; border-radius:6px;" />
 
         <label>Emisiones CO₂:</label>
         <select id="co2" style="width:100%; padding:12px; margin:8px 0 16px; border:1px solid #ccc; border-radius:6px;">
@@ -152,110 +74,42 @@
           <option value="0.1475" selected>Más de 200 g/km (14,75%)</option>
         </select>
 
-        <button onclick="calcular()" style="background:#0d3b66; color:#fff; border:none; padding:12px 20px; border-radius:6px; cursor:pointer;">Calcular Precio Final</button>
-        <div id="resultado" class="result" style="display:none; margin-top:16px;"></div>
-
-        <div style="text-align:center; margin:40px 0;">
-  <h4 style="color:#0a2a4a;">¿Te gustaría que creemos la calculadora para coches de Alemania?</h4>
-  <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST" style="margin-top:15px;">
-    <input type="hidden" name="_subject" value="✅ Interés en Calculadora Alemania">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="email" name="email" placeholder="Tu correo (opcional)" 
-           style="padding:10px; border-radius:6px; border:1px solid #999; width:240px; background:#f9f9f9; color:#333; font-size:14px;">
-
-<button type="submit" 
-style="background:#ffcc00; color:#0a2a4a; border:none; padding:12px 20px; border-radius:6px; font-weight:bold; cursor:pointer; margin-left:8px; box-shadow:0 2px 5px rgba(0,0,0,0.2);">
-  👍 ¡Sí, me interesa!
-</button>
-
-  </form>
-</div>
-
-
-        <!-- FORMULARIO: FormSubmit -->
-        <div id="contacto" class="contact-form" style="display:none; margin-top:18px;">
-          <h3 style="color:#0d3b66;">¿Quieres una estimación exacta?</h3>
-          <p style="color:#333;">Déjanos tus datos y te enviaremos el cálculo preciso y opciones de importación.</p>
-          <form action="https://formsubmit.co/calcoche0@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Tu nombre" required style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
-            <input type="email" name="email" placeholder="Tu correo" required style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px;">
-            <textarea name="message" placeholder="Escribe tu mensaje" required style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:6px; min-height:110px;"></textarea>
-            <!-- Redirección tras enviar -->
-            <input type="hidden" name="_next" value="https://calcoche.com/gracias.html">
-            <!-- Opcionales / seguridad -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="📩 Nueva solicitud desde la Calculadora">
-            <input type="text" name="_honey" style="display:none">
-            <button type="submit" style="background:#0d3b66; color:#fff; border:none; padding:12px 20px; border-radius:6px; cursor:pointer;">Enviar</button>
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_autoresponse" value="¡Gracias! Hemos recibido tu solicitud y te contactaremos en breve.">
-          </form>
-        </div>
-      </div>
-
-      <!-- Texto explicativo adicional (mismo lateral derecho) -->
-      <div class="intro2" style="color:#fff; opacity:1; margin-top:20px;">
-        <h2 style="margin:16px 0 8px;">¿Por qué usar esta calculadora? ✅</h2>
-        <p>Muchas veces se prometen precios irreales para atraer clientes. Aquí obtendrás un cálculo transparente con desglose de todos los costes.</p>
-        <p>Así podrás comparar, planificar mejor tu inversión y evitar sorpresas desagradables. La herramienta es solo una guía, pero te dará una visión mucho más clara del proceso.</p>
+        <button onclick="calcular()" style="width:100%; background:#0d3b66; color:#fff; border:none; padding:15px; border-radius:6px; cursor:pointer; font-weight:bold;">CALCULAR PRECIO FINAL</button>
+        <div id="resultado" style="display:none; margin-top:16px; padding:15px; background:#f0f7ff; border-radius:6px;"></div>
       </div>
     </section>
   </main>
 
-<script>
-  function calcular() {
-    const precioDubai = parseFloat(document.getElementById("precioDubai").value);
-    const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
+  <!-- Aviso de Cookies -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0c2e5b; color: white; padding: 15px; text-align: center; display: none; z-index: 9999;">
+    Este sitio usa cookies. <button id="accept-cookies" style="background: #ffcc00; border: none; padding: 5px 15px; cursor: pointer; border-radius: 4px;">Aceptar</button>
+  </div>
 
-    if (!precioDubai) {
-      alert("Por favor introduce un precio válido.");
-      return;
+  <script>
+    window.onload = function() {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+    document.getElementById("accept-cookies").onclick = function() {
+      localStorage.setItem("cookiesAccepted", "yes");
+      document.getElementById("cookie-banner").style.display = "none";
+    };
+
+    function calcular() {
+      const precioDubai = parseFloat(document.getElementById("precioDubai").value);
+      const tasaMatriculacion = parseFloat(document.getElementById("co2").value);
+      if (!precioDubai) return alert("Pon un precio");
+
+      const precioEur = precioDubai * 0.25;
+      const arancel = (precioEur + 1700) * 0.10;
+      const iva = (precioEur + 1700 + arancel) * 0.21;
+      const total = precioEur + arancel + iva + 1700 + 1620 + 1500 + (precioEur * tasaMatriculacion);
+
+      const res = document.getElementById("resultado");
+      res.style.display = "block";
+      res.innerHTML = `<strong>Total estimado: ${total.toLocaleString('es-ES')} €</strong>`;
     }
-
-    const precioEur = precioDubai * 0.25;     // AED → EUR aprox
-    const transporte = 1700;
-    const itv = 1620;
-    const gastosExtra = 1500;
-
-    const arancel = (precioEur + transporte) * 0.10;
-    const iva = (precioEur + transporte + arancel) * 0.21;
-    const matriculacion = precioEur * tasaMatriculacion;
-    const precioFinal = precioEur + transporte + arancel + iva + matriculacion + itv + gastosExtra;
-
-    const res = document.getElementById("resultado");
-    res.style.display = "block";
-    res.innerHTML = `
-      <h3 style="margin:0 0 8px;">Resultado del cálculo:</h3>
-      <p><b>Precio importación Dubái → España:</b> ${precioFinal.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</p>
-      <p style="margin:10px 0 6px;">Desglose importación:</p>
-      <ul style="margin:0 0 8px 18px; padding-left:0; list-style:none;">
-        <li class="precio">Precio coche: ${precioEur.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-        <li class="arancel">Arancel (10%): ${arancel.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-        <li>IVA (21%): ${iva.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-        <li class="matriculacion">Tasa matriculación: ${matriculacion.toLocaleString('es-ES', {minimumFractionDigits: 2})} €</li>
-        <li>Transporte: ${transporte} €</li>
-        <li>ITV y homologación: ${itv} €</li>
-        <li class="extra">Gastos extra: ${gastosExtra} €</li>
-      </ul>
-    `;
-
-    document.getElementById("contacto").style.display = "block";
-  }
-</script>
-
-
-  <footer>
-    <p>&copy; 2025 calcoche.com – Todos los derechos reservados</p>
-    <p><a href="privacidad.html">Política de Privacidad</a></p>
-
-    <ins class="adsbygoogle" style="display:block; min-height:90px; margin:12px 0"
-       data-ad-client="ca-pub-2994166354624544"
-       data-ad-slot="3315270269"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </footer>
-
+  </script>
 </body>
 </html>
