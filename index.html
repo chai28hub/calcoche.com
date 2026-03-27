@@ -32,7 +32,7 @@
 
   <main class="layout" style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; max-width:1100px; margin:0 auto; padding:16px;">
 
-    <!-- IZQUIERDA: INTRO -->
+    <!-- IZQUIERDA: INTRO Y TU PREGUNTA -->
     <section class="intro" style="flex:1; min-width:280px;">
       <h2 style="margin-top:0;">CALCULADORA APROXIMACIÓN</h2>
       
@@ -41,8 +41,13 @@
       <h2>¿Importar un coche de Dubái a España? 🚗</h2>
       <p>Nuestra misión es ayudarte a entender de manera clara cuáles son los gastos reales que intervienen en el proceso.</p>
       
+      <!-- AQUÍ ESTÁ TU PREGUNTA RECUPERADA -->
+      <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #ffcc00; margin: 20px 0;">
+        <p style="margin:0; font-style: italic;">¿Te gustaría que añadiéramos una calculadora para importar coches desde <strong>Alemania</strong>? Cuéntanos en la sección de contacto.</p>
+      </div>
+
       <a href="explicacion.html" target="_blank" rel="noopener" style="display:inline-block; margin-top:15px; color:#00cfff; text-decoration:underline;">
-         Ver explicación detallada
+         Ver explicación detallada del método
       </a>
     </section>
 
@@ -71,42 +76,25 @@
 
         <button onclick="calcular()" style="width:100%; background:#0d3b66; color:#fff; border:none; padding:15px; border-radius:6px; cursor:pointer; font-weight:bold;">CALCULAR PRECIO FINAL</button>
         
-        <!-- CUADRO BLANCO DETALLADO -->
         <div id="resultado" style="display:none; margin-top:16px; padding:20px; background:#f9f9f9; border: 1px solid #ddd; border-radius:6px; font-size: 0.9em; line-height: 1.6;">
         </div>
       </div>
     </section>
   </main>
 
-  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0c2e5b; color: white; padding: 15px; text-align: center; display: none; z-index: 9999;">
-    Este sitio usa cookies propias y de terceros. <br>
-    <button id="accept-cookies" style="margin-top: 10px; background: #ffcc00; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold;">Aceptar</button>
-  </div>
-
   <script>
-    window.onload = function() {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        document.getElementById("cookie-banner").style.display = "block";
-      }
-    };
-    document.getElementById("accept-cookies").onclick = function() {
-      localStorage.setItem("cookiesAccepted", "yes");
-      document.getElementById("cookie-banner").style.display = "none";
-    };
-
     function calcular() {
       const precioDubai = parseFloat(document.getElementById("precioDubai").value);
       const tasaMatriculacionPct = parseFloat(document.getElementById("co2").value);
       if (!precioDubai) return alert("Por favor introduce un precio.");
 
-      // Cálculos
       const precioEur = precioDubai * 0.25;
       const flete = 1700;
       const baseAduana = precioEur + flete;
       const arancel = baseAduana * 0.10;
       const iva = (baseAduana + arancel) * 0.21;
       const impuestoMatriculacion = precioEur * tasaMatriculacionPct;
-      const otrosGastos = 1620 + 1500; // Aduana, puerto, ficha técnica, etc.
+      const otrosGastos = 1620 + 1500; 
       
       const total = precioEur + arancel + iva + flete + otrosGastos + impuestoMatriculacion;
 
